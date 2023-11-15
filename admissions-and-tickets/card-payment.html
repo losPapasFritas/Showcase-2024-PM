@@ -1,88 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Corbin R -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jurassic Park - Payment Information</title>
 </head>
+
 <body>
-    <section class="column main">
+    <main class="column main">
         <section class="row instructions">
-            
+            Down below, enter your credit/debit card information for ticket payment and admission </br> (Taxes and fees
+            are included).
         </section>
         <section class="row cardNum">
             <section class="cardNumTitle">
-                
+                Credic Card Number
             </section>
-            <section class="cardNumInput">
-
-            </section>
+            <input type="text" class="cardNumInput" placeholder="1111 - 2222 - 3333 - 4444">
         </section>
         <section class="row multiInput cardSecInfo">
-            <section class="column experation">
-
+            <section class="column experationDate">
+                <input type="text" class="experationMonth" placeholder="01">
+                <input type="text" class="experationYear" placeholder="22">
             </section>
-            <section class="column cvv">
-
-            </section>
+            <input class="column cvv" placeholder="CVV">
         </section>
         <section class="row multiInput cardHolderInfo">
-            <section class="column firstName">
-
-            </section>
-            <section class="column lastName">
-
-            </section>
+            <input class="column firstName" placeholder="First Name">
+            <input class="column lastName" placeholder="Last Name">
         </section>
         <section class="row triInput birthdate">
-            <section class="column month">
-
-            </section>
-            <section class="column day">
-
-            </section>
-            <section class="column year">
-                
-            </section>
+            <input class="column month" placeholder="Month">
+            <input class="column day" placeholder="Day">
+            <input class="column year" placeholder="Year">
         </section>
-        <section class="row address">
-
-        </section>
-        <section class="row apt-Ect">
-
-        </section>
-        <section class="row multiInput countryDropDown">
-
-        </section>
-        <section class="row cityOrRegion">
-
-        </section>
+        <input class="row address" placeholder="Address">
+        <div></div>
+        <input class="row apt-Ect" placeholder="Apt. Suite, Building">
+        <select name="" id="" class="countryDropdown">
+            <option value="placeholder">Select an Option</option>
+            <option value="USA">United States of America</option>
+        </select>
+        <input class="row cityOrRegion" placeholder="City or Region">
         <section class="row stateAndZip">
-            <section class="column stateDropDown">
-
-            </section>
-            <section class="column zip">
-
-            </section>
+            <select name="stateDropdown" id="stateDropdown">
+                <option value="placeholder">Select an Option</option>
+                <option value="CA">California</option>
+            </select>
+            <input class="column zip" placeholder="Zip/Postal Code">
         </section>
-        <section class="row emailInput">
-
-        </section>
-        <section class="row phoneInput">
-
-        </section>
+        <input class="row emailInput" placeholder="E-mail Address">
+        <input class="row phoneInput" placeholder="Phone Number">
         <section class="row totalCost">
-
+            $0
         </section>
         <section class="row inPageNavigation">
-            <section class="column backBtn">
-
-            </section>
-            <section class="column payBtn">
-
-            </section>
+            <button class="column backBtn">
+                Go Back
+            </button>
+            <button class="column payBtn">
+                Pay
+            </button>
         </section>
-    </section>
+    </main>
 </body>
+
 </html>
