@@ -16,33 +16,47 @@
             <div class="content">
                 <p>No, pets are not allowed at the park or inside the cabins due to safety reasons.</p>
             </div>
+            <br>
+            <br>
             <button type="button" class="collapsible">Are there any food areas?</button>
             <div class="content">
                 <p>Yes, here at Jurassic Park we have a selection of great places where you and your family can dine at.
                 </p>
             </div>
+            <br>
+            <br>
             <button type="button" class="collapsible">What kind of medical facilities are on the island</button>
             <div class="content">
                 <p>There is a hospital unit and ER if necessary.</p>
             </div>
+            <br>
+            <br>
             <button type="button" class="collapsible">Is there a law enforcement discount?</button>
             <div class="content">
                 <p>There is a discount for the elderly and for people in the military.</p>
             </div>
+            <br>
+            <br>
             <button type="button" class="collapsible">Are the dinosaurs real?</button>
             <div class="content">
                 <p>Yes, the dinosaurs we have at our park are real.</p>
             </div>
+            <br>
+            <br>
             <button type="button" class="collapsible">Can you eat the dinosaurs?</button>
             <div class="content">
                 <p>Yes, you can eat dinosaurs, but only in restaurants that serve it, and if you are willing to pay a
                     lot of money.</p>
             </div>
+            <br>
+            <br>
             <button type="button" class="collapsible">Do I pay for the tickets in Jurassic Coin?</button>
             <div class="content">
                 <p>No, you do not have to pay for tickets in Jurassic Coin, tickets are required to be purchased by
                     debit or credit card on our website.</p>
             </div>
+            <br>
+            <br>
             <button type="button" class="collapsible">Do the events happen just like in the book?</button>
             <div class="content">
                 <p>No, we assure you that we take plenty of safety precautions to ensure you and your family’s safety.
@@ -50,22 +64,47 @@
             </div>
         </section>
     </section>
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-    });}
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <footer>
+        <section class="footer-main">
+            <section class="staff">
+                <h4>About Our Staff</h4>
+                <section class="staff-info">
+                    <p>Here at Jurassic Park's™ Travel and Admission Department (JPTAD), we pride ourselves on getting
+                        you to the park in the best way we can. We have a team of highly educated transport and travel
+                        experts to help you choose the right way to see our magnificent park. Our team of experienced
+                        travel staff will help you with transport options such as our ferries, helicopters, and luxury
+                        seaplanes.
 
-</script>
-
+                        To learn more about our travel staff, visit our About Staff page.</p>
+                    <a href="/admissions-and-tickets/about-staff.html"><button type="button">Learn More</button></a>
+                </section>
+            </section>
+            <section class="buttons">
+                <a href="/admissions-and-tickets/home.html"><button type="button">Home Page</button></a>
+                <br>
+                <a href="/admissions-and-tickets/information.html"><button type="button">Information Page</button></a>
+                <br>
+                <a href="/admissions-and-tickets/tickets.html"><button type="button">Purchasing Tickets</button></a>
+                <br>
+                <a href="/admissions-and-tickets/faq.html"><button type="button">Frequently Asked Questions</button></a>
+            </section>
+        </section>
+    </footer>
 </body>
 
 </html>
