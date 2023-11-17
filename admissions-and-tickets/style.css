@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+/* :root{
+    background-image: url(images/3240971752_\(1\)_upscaled.png);
+} */
+
+main{
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: center;
+    align-self: center;
+    margin: 0vh 15vw;
+    background-color: azure;
+}
+
+/* footer{
+    display 
+} */
