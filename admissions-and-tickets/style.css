@@ -1,11 +1,7 @@
 *{
     box-sizing: border-box;
 }
-/* :root{
-    background-image: url(images/3240971752_\(1\)_upscaled.png);
-} */
-
-main{
+main, .main{
     display: flex;
     flex-flow: column wrap;
     justify-self: center;
@@ -13,7 +9,129 @@ main{
     margin: 0vh 15vw;
     background-color: azure;
 }
-
-/* footer{
-    display 
+/* body{
+    background-image: url(images/3240971752_\(1\)_upscaled.png);
 } */
+
+img{
+    max-width: 100%;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.staff {
+    background-color:#236154;
+    width: 49.14vw;
+}
+
+.staff-info {
+    background-color: #5B9676;
+    padding: 10px;
+    margin: 10px;
+}
+
+.staff-link{
+    background-color: #9E1D21;
+    color: #F3D13C;
+    display: flex;
+    
+    justify-content: space-around;
+}
+
+.buttons{
+    background-color: #236154;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 49.14vw;
+    border: 2px solid red;
+    padding-top: 7px;
+}
+.buttons>a{
+    background-color: #9E1D21;
+    color: #F3D13C;
+    padding: 5px;
+}
+
+/* Home \/ */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Tickets \/ */
+
+
+
+
+
+
+/* Date Select */
+section.row.monthHolder{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid red;
+}
+section.row.monthTitles{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+table{
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    flex-grow: 1;
+    border: 2px solid red;
+}
+
+
+
+
+/* Card Payment */
+
+
+
+
+
+
+/* About */
+
+
+
+
+
+/* Infomation */
+
+.transport-info>figure {
+    display: flex;
+    flex-direction: column;
+    width: 49.14vw;
+}
+
+
+.transport-info {
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #D7D3C6;
+}
+
+.transport-info-text {
+    display: flex;
+    flex-direction: column;
+    width: 49.14vw;
+}
+
+
+
+
+/* FAQ */
