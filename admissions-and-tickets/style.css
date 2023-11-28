@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    /* font-size: xx-large; */
 }
 main, .main{
     display: flex;
@@ -7,7 +8,7 @@ main, .main{
     justify-self: center;
     align-self: center;
     margin: 0vh 15vw;
-    background-color: azure;
+    background-color: #5B9676;
 }
 /* body{
     background-image: url(images/3240971752_\(1\)_upscaled.png);
@@ -66,6 +67,7 @@ header {
 }
 
 
+
 /* Tickets \/ */
 
 
@@ -97,9 +99,20 @@ table{
 
 
 
+
 /* Card Payment */
-
-
+section>input{
+    flex-flow: column nowrap;
+    align-items: center;
+}
+input{
+    font-size: xx-large;
+    height: 50px; 
+}
+select{
+    font-size: xx-large;
+    height: 50px; 
+}
 
 
 
@@ -115,11 +128,13 @@ table{
 .transport-info>figure {
     display: flex;
     flex-direction: column;
-    width: 49.14vw;
+    width: 24%;
 }
 
 
 .transport-info {
+    display: flex;
+    width: 100%;
     padding: 15px;
     margin-top: 10px;
     background-color: #D7D3C6;
@@ -128,10 +143,15 @@ table{
 .transport-info-text {
     display: flex;
     flex-direction: column;
-    width: 49.14vw;
+     width: 74%;
+}
+
+.tickets-info, .expedition {
+    background-color: #D7D3C6;
 }
 
 
-
-
 /* FAQ */
+
+
+
