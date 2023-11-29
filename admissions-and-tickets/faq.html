@@ -9,6 +9,15 @@
 </head>
 
 <body>
+    <!-- Nav -->
+    <aside>
+        <nav class="admissions">
+            <a href="home.html">Home Page</a>
+            <a href="tickets.html">Purchase Tickets</a>
+            <a href="information.html">More Info</a>
+        </nav>
+    </aside>
+    <!-- end of Nav -->
     <section class="main-faq">
 
         <figure>
@@ -106,10 +115,10 @@
             coll[i].addEventListener("click", function () {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
                 } else {
-                    content.style.display = "block";
+                    content.style.maxHeight = content.scrollHeight + "px";
                 }
             });
         }

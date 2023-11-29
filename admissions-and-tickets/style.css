@@ -1,22 +1,59 @@
 *{
     box-sizing: border-box;
-    /* font-size: xx-large; */
 }
+:root{
+    --fontSize:large;
+}
+
 main, .main{
     display: flex;
     flex-flow: column wrap;
     justify-self: center;
     align-self: center;
     margin: 7vh 15vw;
+    padding: 20px;
     background-color: #5B9676;
 }
 /* body{
     background-image: url(images/3240971752_\(1\)_upscaled.png);
 } */
 
+
+
 img{
     max-width: 100%;
 }
+
+/* header thing */
+
+aside>nav {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    padding: 30px;
+    width: 10vw;
+    /* Set the width of the sidebar */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 1;
+    /* Stay at the top */
+    right: 0;
+    background: #D7D3C6;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+    padding-right: 30px;
+    justify-content: space-evenly;
+}
+
+aside>nav>a{
+    border: solid 1px black;
+}
+
+
 
 /* Footer */
 
@@ -27,6 +64,7 @@ footer{
 }
 
 .staff {
+    font-size: var(--fontSize);
     background-color:#236154;
     width: 49.14vw;
 }
@@ -63,10 +101,57 @@ footer{
 /* Home \/ */
 header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+.tickets-home {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: #D7D3C6;
+}
+.packages-home {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin-top: 40px;
+    background-color: #D7D3C6;
+}
 
+.transportation-home {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin-top: 40px;
+    background-color: #D7D3C6;
+}
+
+.packages-home>figure {
+    display: flex;
+    flex-direction: column;
+    width: 24%
+}
+
+.transportation-home>figure {
+    display: flex;
+    flex-direction: column;
+    width: 24%
+}
+
+.button-home {
+    background-color: #D7D3C6;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+}
+
+.button-home>a {
+    background-color: #9E1D21;
+    color: #F3D13C;
+    padding: 5px;
+}
 
 /* Tickets \/ */
 
@@ -78,14 +163,15 @@ header {
 /* Date Select */
 section.row.monthHolder{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
+
 section.row.monthTitles{
     display: flex;
     justify-content: space-around;
-    
 }
 
 table{
@@ -93,27 +179,55 @@ table{
     align-self: stretch;
     justify-content: center;
     flex-grow: 1;
-    border: 2px solid red;
+    border-collapse: collapse;
 }
-
+tr{
+    border-collapse: collapse;
+}
+td{
+    /* border: 2px solid red; */
+    margin: -1px;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    border: black 2px solid;
+    margin: 10px;
+    background-color: #D9D9D9;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-size: var(--fontSize);
+}
+td:empty{
+    border: black 0px solid;
+}
+.monthHolder>p{
+    font-size: xx-large;
+}
 
 
 
 
 /* Card Payment */
+
 section>input{
     flex-flow: column nowrap;
     align-items: center;
 }
 input{
-    font-size: xx-large;
+    font-size: var(--fontSize);
     height: 50px; 
 }
 select{
-    font-size: xx-large;
+    font-size: var(--fontSize);
     height: 50px; 
 }
-
+.infoInput{
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
 
 
 
@@ -150,6 +264,9 @@ select{
     background-color: #D7D3C6;
 }
 
+.expedition>figure {
+    
+}
 
 /* FAQ */
 
@@ -164,6 +281,7 @@ select{
 
 .collapsible {
     background-color: #5B9676;
+    font-size: var(--fontSize);
     padding: 18px;
     width: 100%;
     cursor: pointer;
@@ -178,11 +296,23 @@ select{
 
 .content {
     padding: 0 18px;
+    font-size: var(--fontSize);
     overflow: hidden;
-    display: none;
     background-color: #D7D3C6;
     text-align: left;
-    transition: .2s ease-out;
-    background-color: #f1f1f1;
+    max-height: 0;
+    transition: max-height .2s ease-out;
 }
 
+.collapsible:after {
+    content: '\002B';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size:larger;
+    float: right;
+    margin-left: 5px;
+  }     
+
+  .active:after {
+    content: "\2212";
+  }
