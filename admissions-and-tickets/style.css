@@ -7,7 +7,7 @@ main, .main{
     flex-flow: column wrap;
     justify-self: center;
     align-self: center;
-    margin: 0vh 15vw;
+    margin: 7vh 15vw;
     background-color: #5B9676;
 }
 /* body{
@@ -153,5 +153,36 @@ select{
 
 /* FAQ */
 
+.main-faq{
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: center;
+    align-self: center;
+    margin: 7vh 15vw;
+    background-color: none;
+}
 
+.collapsible {
+    background-color: #5B9676;
+    padding: 18px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: left;
+}
+
+.active, .collapsible:hover {
+    background-color:#5aa57c;
+}
+
+.content {
+    padding: 0 18px;
+    overflow: hidden;
+    display: none;
+    background-color: #D7D3C6;
+    text-align: left;
+    transition: .2s ease-out;
+    background-color: #f1f1f1;
+}
 
