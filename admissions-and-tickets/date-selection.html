@@ -19,7 +19,7 @@
         </nav>
     </aside>
     <!-- end of Nav -->
-    <main class="column main">
+    <main class="column main" id="date-selection">
         <section class="row instructions">
             Down below, specify the arrival date. <br>The first input date will be the date you have your transport ride
             ready to go.
@@ -27,21 +27,25 @@
         <section class="row monthInput">
             <section class="column months">
                 <section class="row monthTitles">
-                    <section class="month1"><caption>November 2023</caption></section>
-                    <section class="month2"><caption class="month2">December 2023</caption></section>
+                    <section class="month1">
+                        <caption>November 2023</caption>
+                    </section>
+                    <section class="month2">
+                        <caption class="month2">December 2023</caption>
+                    </section>
                 </section>
                 <section class="row monthHolder">
                     <p class="monthLeft">&#60;</p>
                     <table>
                         <tbody>
                             <tr>
-                                <td>Sunday</td>
-                                <td>Monday</td>
-                                <td>Tuesday</td>
-                                <td>Wednesday</td>
-                                <td>Thursday</td>
-                                <td>Friday</td>
-                                <td>Saturday</td>
+                                <td>Su</td>
+                                <td>Mo</td>
+                                <td>Tu</td>
+                                <td>We</td>
+                                <td>Th</td>
+                                <td>Fr</td>
+                                <td>Sa</td>
                             </tr>
                             <tr>
                                 <td class="day firstWeekday"></td>
@@ -93,13 +97,13 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td>Sunday</td>
-                                <td>Monday</td>
-                                <td>Tuesday</td>
-                                <td>Wednesday</td>
-                                <td>Thursday</td>
-                                <td>Friday</td>
-                                <td>Saturday</td>
+                                <td>Su</td>
+                                <td>Mo</td>
+                                <td>Tu</td>
+                                <td>We</td>
+                                <td>Th</td>
+                                <td>Fr</td>
+                                <td>Sa</td>
                             </tr>
                             <tr>
                                 <td class="day firstWeekday"></td>
@@ -161,14 +165,17 @@
                 </section>
             </section>
         </section>
-        <section class="row inPageNavigation">
-            <a href="tickets.html">
-                Go Back
-            </a>
-            <button class="column payBtn">
-                Pay Now
-            </button>
-            </a>
+        <section class="row inPageNavigation" id="date-navigation">
+            <section class="return">
+                <a href="tickets.html">
+                    Go Back
+                </a>
+            </section>
+            <section class="pay">
+                <button class="column payBtn">
+                    Pay Now
+                </button>
+            </section>
         </section>
     </main>
     <footer>
