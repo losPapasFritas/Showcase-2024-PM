@@ -375,7 +375,9 @@ select {
     justify-content: space-around;
     align-items: stretch;
 }
-
+.infoInput>*{
+    padding-top: 10px;
+}
 
 
 /* About */
