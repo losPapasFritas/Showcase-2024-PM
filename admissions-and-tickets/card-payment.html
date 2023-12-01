@@ -35,24 +35,31 @@
                 <section class="column experationDate">
                     <input type="text" class="experationMonth" placeholder="01">
                     <input type="text" class="experationYear" placeholder="22">
+                    <input class="column cvv" placeholder="CVV">
                 </section>
-                <input class="column cvv" placeholder="CVV">
+
             </section>
             <section class="row multiInput cardHolderInfo">
                 <input class="column firstName" placeholder="First Name">
                 <input class="column lastName" placeholder="Last Name">
             </section>
-            <section class="row triInput birthdate">
-                <input class="column month" placeholder="Month">
-                <input class="column day" placeholder="Day">
-                <input class="column year" placeholder="Year">
+            <section class="birthday">
+                <section class="row birthdayTitle">
+                    Please Input your Birthdate
+                </section>
+                <section class="row triInput birthdate">
+                    <input class="column month" placeholder="Month">
+                    <input class="column day" placeholder="Day">
+                    <input class="column year" placeholder="Year">
+                </section>
             </section>
-            <input class="row address" placeholder="Address">
-            <div></div>
-            <input class="row apt-Ect" placeholder="Apt. Suite, Building">
+            <section class="multiInput home">
+                <input class="row address" placeholder="Address">
+                <input class="row apt-Ect" placeholder="Apt. Suite, Building">
+            </section>
             <select class="countryDropdown">
                 <option value="placeholder">Select an Option</option>
-                <option value="USA">United States of America</option>
+                <option value="United States of America">United States of America</option>
             </select>
             <input class="row cityOrRegion" placeholder="City or Region">
             <section class="row stateAndZip">
@@ -67,11 +74,11 @@
             <section class="row totalCost">
                 $0
             </section>
-            <section class="row inPageNavigation" >
-                <a href="date-selection.html">
+            <section class="row inPageNavigation">
+                <a href="date-selection.html" class="return">
                     Go Back
                 </a>
-                <button class="column payBtn">
+                <button class="column pay">
                     Pay
                 </button>
             </section>

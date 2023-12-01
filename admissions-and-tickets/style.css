@@ -37,14 +37,14 @@ aside>nav {
     padding: 30px;
     width: 10vw;
     /* Set the width of the sidebar */
-    position: fixed;
+    position: absolute;
     /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1;
     /* Stay on top */
     top: 1;
     /* Stay at the top */
     right: 0;
-    background: #236154;
+    background: #5B9676;
     /* Black */
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -123,6 +123,7 @@ footer {
 }
 
 /* Home \/ */
+
 header>figure {
     display: flex;
     justify-content: space-around;
@@ -183,63 +184,167 @@ header>figure {
     justify-content: space-around;
 }
 
-.pictures-home {
+/* Tickets \/ */
+
+.button-tickets {
     display: flex;
     flex-flow: row wrap;
-    width: 30%;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* Tickets \/ */
 .button-tickets1 {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .button-tickets2 {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
+    margin-top: 20px;
 }
 
 .button-tickets1>a {
     background-color: #b2a696;
     color: black;
     padding: 20px;
+    width: 48%;
 }
 
 .button-tickets2>a {
     background-color: #9E1D21;
     color: #F3D13C;
     padding: 20px;
+    width: 48%;
 }
 
 .information-tickets {
     display: flex;
     background-color: #236154;
     padding: 10px;
+    border: 3px solid black;
+}
+
+.boxes-tickets {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .box1-tickets {
     display: flex;
     background-color: #bcc090;
+    margin-right: 20px;
     margin-top: 20px;
     padding: 20px;
+    border: 3px solid black;
+    width:32%
 }
 
 .box2-tickets {
     display: flex;
     background-color: #bcc090;
+    margin-right: 20px;
+    margin-top: 20px;
     padding: 20px;
+    border: 3px solid black;
+    width: 32%;
 }
 
 .box3-tickets {
     display: flex;
     background-color: #bcc090;
+    margin-top: 20px;
     padding: 20px;
+    border: 3px solid black;
+    width: 32%;
 }
 
+.box4-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 32%;
+}
 
+.box5-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 32%;
+}
+
+.box6-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 32%;
+}
+
+.box7-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 49%;
+}
+
+.box8-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 49%;
+}
+
+.box9-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 32%;
+}
+
+.box10-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 32%;
+}
+
+.box11-tickets {
+    display: flex;
+    background-color: #bcc090;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 32%;
+}
+
+.total-tickets {
+    display: flex;
+    background-color: #236154;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    width: 100%;
+}
 
 /* Date Select */
 .instructions {
@@ -334,7 +439,7 @@ tr:first-of-type>td:last-of-type {
     border-bottom: black solid 2px;
 }
 
-main#date-selection>#date-navigation {
+main#date-selection>#date-navigation{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -342,12 +447,22 @@ main#date-selection>#date-navigation {
 }
 
 .inPageNavigation>.return {
+    background-color: #9E1D21;
+    color: #F3D13C;
+    padding: 5px;
+    border: solid 2px #9E1D21;
+    border-radius: 15px;
+    font-size: x-large;
     margin-right: 225px;
-    margin-left: 275px;
 }
 
 .inPageNavigation>.pay {
-    margin-right: 275px;
+    background-color: #9E1D21;
+    color: #F3D13C;
+    padding: 5px;
+    border: solid 2px #9E1D21;
+    border-radius: 15px;
+    font-size: x-large;
     margin-left: 225px;
 }
 
@@ -378,7 +493,34 @@ select {
 .infoInput>*{
     padding-top: 10px;
 }
-
+.cardNum{
+    flex-flow: column wrap;
+    display: flex;
+    align-items: stretch;
+}
+.multiInput.cardSecInfo{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    flex: 1;
+}
+.multiInput>*{
+    padding-top: 10px;
+}
+.experationDate, .cardHolderInfo, .birthdate, .stateAndZip, .multiInput.home{
+    display: flex;
+}
+.experationDate>*, .cardHolderInfo>*, .birthdate>*, .zip, .multiInput.home>*{
+    flex: 1;
+}
+#card-payment>.instructions{
+    text-align: center;
+}
+#card-payment>section>.inPageNavigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
 
 /* About */
 .about-info {
@@ -388,14 +530,27 @@ select {
     justify-content: center;
 }
 
+.Angel-img, .Corbin-img, .Victoria-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 25%;
+scale: 1.3;
+}
+
+.Angel-text, .Corbin-text, .Victoria-text {
+    width: 85%;
+}
+
 .About,
 .Angel,
 .Corbin,
 .Victoria {
+    display: flex;
     max-width: 85%;
     background-color: #D7D3C6;
     font-size: var(--fontSize);
-    padding: 20px;
+    padding: 15px;
     margin: 10px;
     border: solid 2px black;
 }
@@ -417,6 +572,8 @@ select {
 .transport-info>figure {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 25%;
 
 }
@@ -424,7 +581,7 @@ select {
 .transport-info {
     display: flex;
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     margin-top: 10px;
     border-radius: 15px;
     border: solid 2px black;
@@ -468,13 +625,28 @@ select {
     max-width: 100px;
 }
 
-.expedition>figure {
+.expedition {
+    display: flex;
+}
+
+.expedition>.expedition-volcano {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 24%;
+    scale: 1.3;
 }
 
 
+.expedition>.expedition-dino {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    scale: 1.3;
+}
+
+.expedition-text{
+    width: 75%;
+}
 
 /* FAQ */
 
