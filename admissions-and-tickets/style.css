@@ -114,7 +114,6 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     width: 49.14vw;
-
 }
 
 .buttons>a {
@@ -195,27 +194,26 @@ header>figure {
 
 .button-tickets1 {
     display: flex;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-top: 40px;
 }
 
 .button-tickets2 {
     display: flex;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .button-tickets1>a {
     background-color: #b2a696;
     color: black;
     padding: 20px;
-    width: 49%;
+    width: 45%;
 }
 
 .button-tickets2>a {
     background-color: #9E1D21;
     color: #F3D13C;
     padding: 20px;
-    width: 48%;
+    width: 45%;
 }
 
 .information-tickets {
@@ -235,8 +233,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -245,8 +242,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -255,7 +251,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -264,8 +260,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -274,8 +269,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -284,7 +278,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -293,8 +287,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 40%;
 }
@@ -303,7 +296,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 40%;
 }
@@ -312,8 +305,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -322,8 +314,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -332,7 +323,7 @@ header>figure {
     display: flex;
     background-color: #bcc090;
     border: 3px solid black;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 120px;
     width: 28%;
 }
@@ -341,7 +332,7 @@ header>figure {
     display: flex;
     background-color: #236154;
     border: 3px solid black;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 20px;
     width: 100%;
 }
@@ -527,6 +518,7 @@ select {
 }
 
 /* About */
+
 .about-info {
     font-size: var(--fontSize);
     display: flex;
@@ -560,6 +552,9 @@ scale: 1.3;
     border: solid 2px black;
 }
 
+.Corbin{
+    flex-direction: row-reverse;
+}
 
 .About {
     max-width: 65%;
@@ -639,7 +634,7 @@ scale: 1.3;
 .expedition>.expedition-volcano {
     display: flex;
     flex-direction: column;
-    width: 24%;
+    width: 25%;
     scale: 1.3;
 }
 
@@ -647,7 +642,7 @@ scale: 1.3;
 .expedition>.expedition-dino {
     display: flex;
     flex-direction: column;
-    width: 24%;
+    width: 25%;
     scale: 1.3;
 }
 
@@ -729,7 +724,87 @@ scale: 1.3;
 
 /* Phone --only changed styles*/
 
+@media only screen and (max-width:1470px){
+    .transport-info, .expedition {
+        display: flex;
+        flex-flow: row wrap;
+    }
+ .Angel, .Corbin, .Victoria {
+    flex-flow: column wrap;
+    max-width: 75%;
+    align-items: center;
+}
 
-/* @media only screen and (max-width:640px){
+.Angel-img, .Corbin-img, .Victoria-img {
+    min-width: 40%;
+}
+
+}
+
+@media only screen and (max-width:880px){
+    footer {
+        flex-flow: row wrap;
+    }
+    .staff {
+        width: 100vw;
+    }
+    .buttons {
+        width: 100vw;
+        padding-bottom: 10px;
+    }
     
-} */
+    .Angel-img, .Corbin-img, .Victoria-img {
+        min-width: 50%;
+    }
+    
+    
+}
+
+@media only screen and (max-width:690px){
+    #card-payment{
+        padding: 1vw;
+    }
+    table:nth-of-type(2){
+        display: none;
+        font-size: xx-large;
+    }
+    section.month2{
+        display: none;
+    }
+    td {
+        /* border: 2px solid red; */
+        height: 7vw;
+        width: 7vw;
+    }
+    .inPageNavigation>.return {
+        margin-right: 10vw;
+    }
+    
+    .inPageNavigation>.pay {
+        margin-left: 10vw;
+    }
+}
+
+@media only screen and (max-width:620px){
+    #card-payment{
+        padding: 4px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .multiInput>.experationDate,.multiInput.cardHolderInfo,.birthdate.triInput,.multiInput.home{
+        flex-wrap: wrap;
+    }
+    .multiInput>.experationDate>*,.multiInput.cardHolderInfo>*,.birthdate.triInput>*,.multiInput.home>*{
+        width: fit-content;
+    }
+    .cardNum, .countryDropdown, .cityOrRegion, .stateAndZip, .emailInput, .phoneInput,.experationDate, .cardSecInfo, .cardHolderInfo, .birthday, .multiInput.home, #card-payment>.instructions,.totalCost{
+        max-width: 63vw;
+    }
+}
+
+@media only screen and (max-width:380px){
+    #date-selection>.monthInput{
+        padding: 2px;
+    }
+}
