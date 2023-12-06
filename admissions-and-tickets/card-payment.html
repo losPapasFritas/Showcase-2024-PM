@@ -29,12 +29,15 @@
                 <section class="cardNumTitle">
                     Credic Card Number
                 </section>
-                <input type="text" class="cardNumInput" placeholder="1111 - 2222 - 3333 - 4444">
+                <input type="number" class="cardNumInput" placeholder="1111 - 2222 - 3333 - 4444">
             </section>
             <section class="row multiInput cardSecInfo">
+                <section class="cardInstructions">
+                    Below, please insert your card's experation date and CVV
+                </section>
                 <section class="column experationDate">
-                    <input type="text" class="experationMonth" placeholder="01">
-                    <input type="text" class="experationYear" placeholder="22">
+                    <input type="number" class="experationMonth" placeholder="01">
+                    <input type="number" class="experationYear" placeholder="22">
                     <input class="column cvv" placeholder="CVV">
                 </section>
 
@@ -48,9 +51,9 @@
                     Please Input your Birthdate
                 </section>
                 <section class="row triInput birthdate">
-                    <input class="column month" placeholder="Month">
-                    <input class="column day" placeholder="Day">
-                    <input class="column year" placeholder="Year">
+                    <input type="number" class="column month" placeholder="Month">
+                    <input type="number" class="column day" placeholder="Day">
+                    <input type="number" class="column year" placeholder="Year">
                 </section>
             </section>
             <section class="multiInput home">
@@ -313,10 +316,10 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                 </select>
-                <input class="column zip" placeholder="Zip/Postal Code">
+                <input type="number" class="column zip" placeholder="Zip/Postal Code">
             </section>
             <input class="row emailInput" placeholder="E-mail Address">
-            <input class="row phoneInput" placeholder="Phone Number">
+            <input type="number" class="row phoneInput" placeholder="Phone Number">
             <section class="row totalCost">
                 $0
             </section>
