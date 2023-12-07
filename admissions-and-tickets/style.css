@@ -189,14 +189,14 @@ header>figure {
 .button-tickets1 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 40px;
 }
 
 .button-tickets2 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 40px;
 }
 
@@ -382,7 +382,12 @@ td {
     font-size: var(--fontSize);
 }
 
-td:empty {
+tbody>:not(tr:first-child)>td:hover,
+td {
+    background-color: #7DB8C8;
+}
+
+.monthHolder>table>tbody>tr>td:empty {
     border: black 0px solid;
     background-color: #C5C5C5;
 }
@@ -586,6 +591,11 @@ select {
 
 /* Infomation */
 
+.main-info {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .main-info>h1 {
     display: flex;
     justify-content: center;
@@ -652,22 +662,24 @@ select {
 
 .expedition {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.expedition>.expedition-volcano {
+.expedition>img {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     width: 25%;
     scale: 1.3;
 }
 
-
+/* 
 .expedition>.expedition-dino {
     display: flex;
     flex-direction: column;
     width: 25%;
     scale: 1.3;
-}
+} */
 
 .expedition-text {
     width: 75%;
@@ -749,12 +761,6 @@ select {
 
 @media only screen and (max-width:1470px) {
 
-    .transport-info,
-    .expedition {
-        display: flex;
-        flex-flow: row wrap;
-    }
-
     .Angel,
     .Corbin,
     .Victoria {
@@ -774,6 +780,52 @@ select {
 @media only screen and (max-width:880px) {
     footer {
         flex-flow: row wrap;
+    }
+
+    main,
+    .main {
+        margin: 0vh 0vw;
+        padding: 0px;
+        left: 0;
+    }
+
+    .tickets-info {
+        text-align: center;
+    }
+
+    .expedition-text,
+    .expedition-dino,
+    .expedition-volcano {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        text-align: center;
+    }
+
+    .expedition-volcano {
+        width: 40%;
+    }
+
+    .expedition-dino {
+        width: 40%;
+    }
+
+
+    .transport-info {
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        width: fit-content;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .transport-info>figure {
+        width: 85%
+    }
+
+    .transport-info-text {
+        width: 100%;
     }
 
     .staff {
@@ -900,13 +952,29 @@ select {
     /* .about-info>h1 {
     max-width: 50%;
  } */
- 
- .transport-info{
-    text-align: center;
- }
+
+    .transport-info {
+        text-align: center;
+    }
+
     .transport-info>figure {
         width: 85%
     }
+
+    .transport-info-text {
+        width: 100%;
+    }
+
+
+    .expedition-text,
+    .expedition-dino,
+    .expedition-volcano {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        text-align: center;
+    }
+
 }
 
 @media only screen and (max-width:380px) {
