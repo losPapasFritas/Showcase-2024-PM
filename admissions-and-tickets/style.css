@@ -5,6 +5,63 @@
 :root {
     --fontSize: large;
 }
+/* start of header */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0rem;
+}
+
+.headerItem {
+    display: inline-block;
+    position: relative;
+}
+
+.headerItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+    border-radius: 50px;
+}
+
+.headerItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+/* Remove underscore for url stuff */
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:active {
+    text-decoration: none;
+}
+
+a {
+    color:white;
+}
+/* end of header */
 
 main,
 .main {
@@ -28,26 +85,27 @@ img {
     max-width: 100%;
 }
 
+
+
 /* header thing */
 
-aside>nav {
+ aside>nav {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     text-align: center;
     padding: 1vw;
-    width: 13vw;
-    /* Set the width of the sidebar */
+    width: 100vw;
+  height: 10vh;
     position: absolute;
-    /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1;
-    /* Stay on top */
+
     top: 1;
-    /* Stay at the top */
-    right: 0;
+
+    left: 0;
     background: #5B9676;
-    /* Black */
+    border: solid 1px black;
+
     overflow-x: hidden;
-    /* Disable horizontal scroll */
+
     padding-top: 20px;
     justify-content: space-evenly;
     align-items: center;
@@ -59,7 +117,7 @@ aside>nav>a {
     color: #F3D13C;
     padding: 5px;
 
-}
+} 
 
 
 
@@ -69,6 +127,10 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     border: solid 2px black;
+}
+
+.staff>.staff-info>h4 {
+    margin-top:0;
 }
 
 .staff {
@@ -184,8 +246,6 @@ header>figure {
 
 /* Tickets \/ */
 
-
-
 .button-tickets1 {
     display: flex;
     flex-flow: row wrap;
@@ -225,101 +285,68 @@ header>figure {
     justify-content: space-around;
 }
 
-.box1-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
+#products {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1em;
+    margin-bottom: 2rem;
 }
 
-.box2-tickets {
-    display: flex;
-    background-color: #bcc090;
+.product {
     border: 3px solid black;
+    background-color: #bcc090;
+    padding: 112px;
     margin-top: 40px;
-    padding: 120px;
+    position: relative;
 }
 
-.box3-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
+.product:hover {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
 }
 
-.box4-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
+.prodPrice::before {
+    content: "$ ";
 }
 
-.box5-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
+.prodPrice {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-right: 0.4em;
 }
 
-.box6-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
+.prodBtn {
+    display: block;
+    float: right;
+    background-color: #7DB8C8;
+    color: black;
+    border: 1px solid black;
+    padding: 1em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: background-color 500ms ease;
 }
 
-.box7-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
+.prodBtn:hover {
+    background-color: #9E1D21;
+    color: #F3D13C;
 }
 
-.box8-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
-}
-
-.box9-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
-}
-
-.box10-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
-}
-
-.box11-tickets {
-    display: flex;
-    background-color: #bcc090;
-    border: 3px solid black;
-    margin-top: 40px;
-    padding: 120px;
-}
-
-.total-tickets {
+.cartTotal {
     display: flex;
     background-color: #236154;
     border: 3px solid black;
     margin-top: 40px;
     padding: 20px;
     width: 100%;
+}
+
+#cartTotal::before {
+    content: "( ";
+}
+
+#cartTotals::after {
+    content: " )";
 }
 
 /* Date Select */
@@ -382,8 +409,7 @@ td {
     font-size: var(--fontSize);
 }
 
-tbody>:not(tr:first-child)>td:hover,
-td {
+tbody>:not(tr:first-child)>td:hover {
     background-color: #7DB8C8;
 }
 
@@ -559,6 +585,7 @@ select {
     align-items: center;
     width: 25%;
     scale: 1.3;
+    
 }
 
 .Angel-text,
@@ -626,7 +653,7 @@ select {
 .transport-info-text {
     display: flex;
     flex-direction: column;
-    width: 32%;
+    width: 100%;
 }
 
 .tickets-info,
@@ -662,7 +689,7 @@ select {
 
 .expedition {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: center;
 }
 
@@ -679,10 +706,14 @@ select {
 }
 
 .expedition-text {
-    width: 75%;
+    width: 32%;
 }
 
 /* FAQ */
+
+.main-FAQ {
+    background-color: #236154;
+}
 
 .main-faq {
     display: flex;
@@ -693,7 +724,7 @@ select {
 }
 
 .main-faq>h1 {
-    background-color: #5aa57c;
+    background-color: #5B9676;
     padding: 10px;
     display: flex;
     flex-flow: column;
@@ -743,10 +774,6 @@ select {
     content: "\2212";
 }
 
-.main-FAQ {
-    background-color: transparent;
-    border-color: transparent;
-}
 
 .top-img>img {
     display: flex;
@@ -797,19 +824,6 @@ select {
         flex-flow: column wrap;
         align-items: center;
         text-align: center;
-    }
-
-    .expedition-volcano {
-        width: 40%;
-        scale: 2.5;
-        margin-bottom: 350px;
-        margin-top: 170px;
-    }
-
-    .expedition-dino {
-        width: 40%;
-        scale: 2.5;
-        margin-bottom: 170px;
     }
 
 
@@ -874,6 +888,18 @@ select {
 
     .inPageNavigation>.pay {
         margin-left: 10vw;
+    }
+
+    .expedition {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .expedition>.expedition-volcano, .expedition>.expedition-dino {
+        width: auto;
+    }
+   
+    .expedition-text{
+        width: 100%;
     }
 }
 
@@ -982,5 +1008,21 @@ select {
 @media only screen and (max-width:380px) {
     #date-selection>.monthInput {
         padding: 2px;
+    }
+}
+
+@media only screen and (max-width:690px) {
+    .packages-home>figure {
+        width: auto;
+    }
+
+    .transportation-home>figure{
+        width: auto;
+    }
+}
+
+@media only screen and (max-width:690px) {
+    .product {
+        padding: 55px;
     }
 }

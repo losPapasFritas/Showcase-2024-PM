@@ -6,11 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- <style>
+        aside{
+            display: flex;
+            flex-direction: row;
+        }
+        aside>nav{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navToggle {
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 10%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .navToggle:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-width: 0;
+            overflow: hidden;
+            transition: max-width 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+    </style> -->
 </head>
 
 <body>
+    <header>
+        <section>
+            <nav>
+                <section class="header">
+                    <p class="headerItem"><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;Home</a></p>
+                    <p class="headerItem"><a href="experiences.html"><i
+                                class="fa-solid fa-compass"></i>&nbsp;Experiences</a></p>
+                    <p class="headerItem"><i class="fa-solid fa-utensils"></i>&nbsp;Dining</p>
+                    <p class="headerItem"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Shopping</p>
+                    <p class="headerItem"><a href="about.html"><i class="fa-solid fa-users"></i>&nbsp;About Us</a></p>
+                    <p class="headerItem"><a href="jurassicpay.html"><i
+                                class="fa-solid fa-coins"></i>&nbsp;JurassicPAY</a></p>
+                    <p class="headerItem"><i class="fa-solid fa-ticket"></i>&nbsp;Tickets</p>
+                </section>
+            </nav>
+        </section>
+    </header>
     <!-- Nav -->
     <aside>
+        <!-- <button class="navToggle">Toggle Nav</button> -->
         <nav class="admissions">
             <a href="home.html">Home Page</a>
             <a href="tickets.html">Purchase Tickets</a>
@@ -128,6 +182,20 @@
                 }
             });
         }
+
+        // var nav = document.getElementsByClassName("navToggle");
+        // var h;
+        // for (h = 0; h < nav.length; h++) {
+        //     nav[h].addEventListener("click", function () {
+        //         this.classList.toggle("active");
+        //         var content = this.nextElementSibling;
+        //         if (content.style.maxWidth) {
+        //             content.style.maxWidth = null;
+        //         } else {
+        //             content.style.maxWidth = content.scrollWidth + "px";
+        //         }
+        //     });
+        // }
     </script>
 </body>
 
