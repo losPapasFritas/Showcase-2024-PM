@@ -1,0 +1,90 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1.3vw;
+    margin: 0rem;
+    background-color: #236154;
+    transform: translateX(-10px);
+    border-top:3px solid  #236154 ;
+    /* padding-left:1em; */
+    /* padding-top: 2em;*/
+    
+
+}
+
+body {
+    margin-bottom: 0;
+}
+
+.headerItem {
+    display: inline-block;
+    position: relative;
+    /* color: #0087ca; */
+}
+
+.headerItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+    border-radius: 50px;
+}
+
+.headerItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+/* Remove underscore for url stuff */
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:active {
+    text-decoration: none;
+}
+
+.header>a {
+    color:white;
+}
+
+.header>i {
+    color: white;
+}
+
+.header>p {
+    color:white;
+}
+
+@media only screen and (max-width:880px) {
+
+.header{
+    flex-wrap:wrap;
+    width: 200%;
+    transform: translateX(-5px);
+   
+}
+
+
+
+}
