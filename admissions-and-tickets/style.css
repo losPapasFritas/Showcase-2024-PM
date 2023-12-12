@@ -953,7 +953,7 @@ select {
 
     main,
     .main {
-        margin: 0vh 0vw;
+        margin-top: 10vh;
         padding: 0px;
         left: 0;
     }
