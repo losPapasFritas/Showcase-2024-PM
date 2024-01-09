@@ -1,11 +1,10 @@
 const
     // set the name of your shop here
-    shopID = 'ticketShop',
+    shopID = 'testShop',
     // match the following attributes to the classes on your products
+    productName = 'name',
     productClass = 'product',
-    nameClass = 'prodName',
     priceClass = 'prodPrice',
-    
     // match the following attributes to your cart total elements
     cartTotalID = 'cartTotal',
     cartItemCountID = 'cartItemCount';
@@ -38,7 +37,7 @@ function addToCart(e) {
     // loop through the product attributes and assign them to the array
     for (let node of product) {
         if (node.className === nameClass) attributes[0] = node.innerText;
-        if (node.className === priceClass) attributes[2] = parseFloat(node.innerText);
+        if (node.className === priceClass) attributes[1] = parseFloat(node.innerText);
     }
     // check if any attributes are undefined
     if (attributes.includes(undefined)) {
@@ -104,14 +103,18 @@ function updateCart() {
         total += item.price * item.qty;
         cart.innerHTML += `
         <div class="cartItem">
-            <h3>${item.name}</h3>
-            <p>${item.desc}</p>
-            <div class="cartItemPricing">
-                <p>Price: $${item.price.toFixed(2)}</p>
-                <p>Quantity: ${item.qty}</p>
-                <p>Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
-                <a id="${index}" href="#" class="removeBtn">Remove</a>
+            <img src="${item.imgSrc}" alt="${item.name}">
+            <div class="cartItemInfo" >
+                <h3>${item.name}</h3>
+                <p>${item.desc}</p>
+                <div class="cartItemPricing">
+                    <p>Price: $${item.price.toFixed(2)}</p>
+                    <p>Quantity: ${item.qty}</p>
+                    <p>Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
+                    <a id="${index}" href="#" class="removeBtn">Remove</a>
+                </div>
             </div>
+            
         </div>
         `;
     }
@@ -138,11 +141,24 @@ function removeItem(e) {
     location.reload();
 }
 
+function emptyCart() {
+    // empty cart
+    shop.cart = [];
+    // update local storage
+    localStorage.setItem(shopID, JSON.stringify(shop));
+    // reload page to update cart
+    location.reload();
+}
+
+// Add Event listners when DOM is ready
 document.addEventListener("DOMContentLoaded", function () {
     // check if addToCart buttons exist
     if (document.querySelectorAll('.addToCart') !== null) {
         let cartButtons = document.querySelectorAll('.addToCart');
-        cartButtons.forEach(button => button.addEventListener('click', addToCart))
+        cartButtons.forEach(button => button.addEventListener('click', addToCart));
+    }
+    else{
+        console.log('there is no add to cart button')
     }
     // check if cart element exists
     if (document.getElementById('cart') !== null) {

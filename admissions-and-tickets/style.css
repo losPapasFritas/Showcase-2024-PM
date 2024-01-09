@@ -200,20 +200,39 @@ header>figure {
 }
 
 .tickets-home {
+    font-size: var(--fontSize);
     display: flex;
     width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: solid 2px black;
     background-color: #D7D3C6;
 }
 
+.home>h1 {
+    text-align: center;
+}
+
 .packages-home {
+    font-size: var(--fontSize);
     display: flex;
     width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: solid 2px black;
     background-color: #D7D3C6;
 }
 
 .transportation-home {
+    font-size: var(--fontSize);
     display: flex;
     width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: solid 2px black;
     background-color: #D7D3C6;
 }
 
@@ -230,15 +249,17 @@ header>figure {
 }
 
 .button-home {
-    background-color: #D7D3C6;
     display: flex;
     flex-flow: column wrap;
     align-items: flex-end;
 }
 
 .button-home>a {
+    font-size: var(--fontSize);
     background-color: #9E1D21;
     color: #F3D13C;
+    margin-top: 10px;
+    border-radius: 15px;
     padding: 5px;
 }
 
@@ -248,6 +269,12 @@ header>figure {
 }
 
 /* Tickets \/ */
+
+.ticket-h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .button-tickets1 {
     display: flex;
@@ -277,7 +304,7 @@ header>figure {
 
 .information-tickets {
     display: flex;
-    background-color: #236154;
+    background-color: #5B9676;
     padding: 10px;
     border: 3px solid black;
 }
@@ -297,11 +324,17 @@ header>figure {
 }
 
 .product {
+    
     border: 3px solid black;
     background-color: #bcc090;
     padding: 112px;
     margin-top: 40px;
     position: relative;
+}
+
+.prodName {
+    display: flex;
+    justify-content: center;
 }
 
 .product:hover {
@@ -674,6 +707,7 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 
 .ticket-button>a {
@@ -1028,4 +1062,12 @@ select {
     .product {
         padding: 55px;
     }
+}
+
+@media only screen and (max-width:440px) {
+    .Angel-img,
+    .Corbin-img,
+    .Victoria-img {
+    min-width: 110%;
+}
 }
