@@ -2,8 +2,8 @@ const
     // set the name of your shop here
     shopID = 'testShop',
     // match the following attributes to the classes on your products
-    productName = 'name',
     productClass = 'product',
+    nameClass = 'prodName',
     priceClass = 'prodPrice',
     // match the following attributes to your cart total elements
     cartTotalID = 'cartTotal',
@@ -103,10 +103,8 @@ function updateCart() {
         total += item.price * item.qty;
         cart.innerHTML += `
         <div class="cartItem">
-            <img src="${item.imgSrc}" alt="${item.name}">
             <div class="cartItemInfo" >
                 <h3>${item.name}</h3>
-                <p>${item.desc}</p>
                 <div class="cartItemPricing">
                     <p>Price: $${item.price.toFixed(2)}</p>
                     <p>Quantity: ${item.qty}</p>
