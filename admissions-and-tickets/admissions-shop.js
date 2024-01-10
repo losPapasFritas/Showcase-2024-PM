@@ -100,6 +100,10 @@ function updateCart() {
     }
     // loop through cart and add items to cart element
     for (let [index, item] of shop.cart.entries()) {
+        if((item.name == "Month")||(item.name == "Weeks")||(item.name == "Days")){
+
+        }
+        else{
         total += item.price * item.qty;
         cart.innerHTML += `
         <div class="cartItem">
@@ -115,6 +119,7 @@ function updateCart() {
             
         </div>
         `;
+        }
     }
     // add total to cart element
     cart.innerHTML += `
